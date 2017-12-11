@@ -1,0 +1,26 @@
+/*
+** my_strchr.c for my_strchr.c in /home/bouhastine/c/jour03/bouhas_m/my_strchr
+** 
+** Made by BOUHASTINE Mohamed
+** Login   <bouhas_m@etna-alternance.net>
+** 
+** Started on  Wed Oct 18 02:13:20 2017 BOUHASTINE Mohamed
+** Last update Wed Oct 18 07:12:41 2017 BOUHASTINE Mohamed
+*/
+
+void	 my_putstr(char *str);
+void	 my_putchar(char c);
+char*	 my_strchr(char *str, char c)
+{
+  while (*str != '\0')
+    {
+      if (*str != c)
+	{
+	  str++;
+	}
+      else if (*str == c)
+	{
+	  return (str);
+	}
+    }
+}

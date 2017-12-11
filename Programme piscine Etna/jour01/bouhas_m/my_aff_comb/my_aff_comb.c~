@@ -1,0 +1,54 @@
+/*
+** my_aff_comb.c for my_aff_comb.c in /home/bouhastine/c/jour01/bouhas_m/my_aff_comb
+** 
+** Made by BOUHASTINE Mohamed
+** Login   <bouhas_m@etna-alternance.net>
+** 
+** Started on  Mon Oct 16 22:15:47 2017 BOUHASTINE Mohamed
+** Last update Mon Oct 16 22:15:49 2017 BOUHASTINE Mohamed
+*/
+#include <unistd.h>
+void my_putchar(char c)
+{
+  write(1, &c, 1);
+}
+
+void my_aff_comb()
+{
+  int a = 48;
+  int b = 49;
+  int c = 50;
+
+  while (a <= 9)
+    {
+      while ( b <= 9)
+	{
+	  
+	  while ( c <= 9)
+	    {
+	      c = c + 1;
+	      if (c >9)
+		{
+		  c = 0;
+		  b = b + 1;
+		}
+	    }
+	  b = b + 1;
+	  if (b >9)
+	    {
+	      b = 0;
+	      a = a + 1;
+	    }
+	}
+      a = a +1;
+      if (a > 9)
+	{
+	  a = 0;
+	}
+      return (0);
+    }
+  
+  int main(void)
+  {
+    my_putchar(my_aff_comb());
+  }

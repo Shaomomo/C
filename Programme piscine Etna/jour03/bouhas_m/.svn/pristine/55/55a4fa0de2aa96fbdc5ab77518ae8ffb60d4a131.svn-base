@@ -1,0 +1,41 @@
+/*
+** my_trspos_tab.c for my_trspos_tab.c in /home/bouhastine/c/jour03/bouhas_m/my_trspos_tab
+** 
+** Made by BOUHASTINE Mohamed
+** Login   <bouhas_m@etna-alternance.net>
+** 
+** Started on  Wed Oct 18 04:50:34 2017 BOUHASTINE Mohamed
+** Last update Wed Oct 18 06:53:15 2017 BOUHASTINE Mohamed
+*/
+#include <unistd.h>
+void my_putchar(char c)
+{
+  write(1, &c, 1);
+}
+void my_trspos_tab(int c, int l, char **tab)
+{
+  int compt1;
+  int compt2;
+
+  compt1 = 0;
+  compt2 = 0;
+  while (compt1 < c)
+    {
+      while(compt2 < l)
+	{
+	  my_putchar(tab[compt2][compt1]);
+	  compt2 = compt2 + 1;
+	}
+      my_putchar('\n');
+      compt1 = compt1 + 1;
+      compt2 = 0;
+    }
+}
+int main(void)
+{
+  char *arr[] = {"abcdefghij",
+		 "0123456789",
+		 "qwertyuiop"};
+  my_trspos_tab(10, 3, arr);
+  return (0);
+}

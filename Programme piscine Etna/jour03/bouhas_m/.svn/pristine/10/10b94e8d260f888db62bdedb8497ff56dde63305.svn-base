@@ -1,0 +1,25 @@
+/*
+** my_strlen.c for my_strlen.c in /home/bouhastine/c/jour03/bouhas_m/my_strlen
+** 
+** Made by BOUHASTINE Mohamed
+** Login   <bouhas_m@etna-alternance.net>
+** 
+** Started on  Wed Oct 18 00:38:07 2017 BOUHASTINE Mohamed
+** Last update Wed Oct 18 01:09:47 2017 BOUHASTINE Mohamed
+*/
+
+void	 my_putchar(char c);
+int	 my_strlen( char *str)
+{
+  int	 i;
+  int	 compt;
+
+  i = 0;
+  compt = 1;
+  while (str[i] != '\0')
+    {
+      str[i] = i + 1; 
+      compt = compt + 1;
+      return (compt);
+    }
+}

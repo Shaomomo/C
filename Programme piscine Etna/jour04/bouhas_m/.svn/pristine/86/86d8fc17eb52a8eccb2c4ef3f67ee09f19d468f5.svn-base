@@ -1,0 +1,30 @@
+#include <unistd.h>
+void my_putchar(char c)
+{
+  write(1, &c, 1);
+}
+
+char	 *my_strncpy(char * dest, char *src, int n)
+{
+  int	i;
+
+  i = 0;
+  while (src[i] != '\0' && i < n)
+    {
+	  if (src[i] < dest[i])
+	    {
+	      dest[i] = '\0';
+	    }
+	  dest[i] = src[i];
+	  my_putchar(dest[i]);
+	  i = i + 1;
+    }
+  return (dest);
+}
+
+int main(void)
+{
+  char dest[]= "chocolat";
+  char src[]= "orange";
+  my_strncpy(dest, src, 3);
+}
